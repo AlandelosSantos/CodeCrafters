@@ -1,5 +1,8 @@
+<?php
+    require "control.php";
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +19,6 @@
             >
         </div>
         <div class="text-center fs-4 p-2 fw-bold" style="color: #323232;">BIENVENIDO</div>
-        <div>
-            <?php
-            include("control.php");
-            ?>
-        </div>
         <form class="p-3" action="" method="post">
             <div class="input-group">
                 <div class="input-group-text " style="background-color: #00b2d0ff;">
@@ -61,6 +59,7 @@
     <footer class="position-absolute bottom-0 w-100 bg-white text-center text-lg-start">
         <div class=" text-center p-2">© 2024 Copyright:
           <a class="text-info" >CodeCrafters</a>
+          <a href="./AboutUs/aboutUs.html">Los4Hermanos</a>
         </div>
       </footer>
 </html>
