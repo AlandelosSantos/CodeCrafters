@@ -58,8 +58,8 @@
     </body>
     <footer class="position-absolute bottom-0 w-100 bg-white text-center text-lg-start">
         <div class=" text-center p-2">© 2024 Copyright:
-          <a class="text-info" >CodeCrafters</a>
-          <a href="./AboutUs/aboutUs.html">Los4Hermanos</a>
+          <a href="AboutUss.html">Los4Hermanos</a>
+          
         </div>
       </footer>
 </html>
