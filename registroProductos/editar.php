@@ -1,8 +1,8 @@
 <?php
 include "./conexion.php";
-$CodigoBa = $_GET["CodigoBarras"];
+$CodigoBarras = $_GET["CodigoBarras"];
 
-$sql = $conexion->query("select * from producto where CodigoBarras =$CodigoBa ");
+$sql = $conexion->query("select * from producto where CodigoBarras=$CodigoBarras");
 
 ?>
 <!DOCTYPE html>
@@ -15,36 +15,36 @@ $sql = $conexion->query("select * from producto where CodigoBarras =$CodigoBa ")
 </head>
 <body>
 <form class="col-4 p-3 m-auto" method="POST">
-        <h3 class="text-center text-secundary" >Editar Producto</h3>
+        <h3 class="text-center alert alert-secondary" >Editar Producto</h3>
+        <input type="text" name="CodigoBarras" value="<?= $_GET["CodigoBarras"]?>" >
         <?php 
+        include "./controlEditar.php";
         while($datos=$sql->fetch_object()){?>
           <div class="mb-3">
         <label for="exampleInputCodigo" class="form-label">Codigo de Barras</label>
-        <input type="text" class="form-control" name="CodigoB">
+        <input type="text" class="form-control" name="CodigoB" value="<?= $datos->CodigoBarras ?>">
     </div>
     <div class="mb-3">
         <label for="exampleInputCodigo" class="form-label">Precio</label>
-        <input type="text" class="form-control" name="Precio">
+        <input type="text" class="form-control" name="Precio" value="<?= $datos->Precio ?>">
     </div>
     <div class="mb-3">
         <label for="exampleInputCodigo" class="form-label">Descripcion</label>
-        <input type="text" class="form-control" name="Descripcion">
+        <input type="text" class="form-control" name="Descripcion" value="<?= $datos->Descripcion ?>">
     </div>
     <div class="mb-3">
         <label for="exampleInputCodigo" class="form-label">Ofertas</label>
-        <input type="text" class="form-control" name="Ofertas">
+        <input type="text" class="form-control" name="Ofertas" value="<?= $datos->Ofertas ?>">
     </div>
     <div class="mb-3">
         <label for="exampleInputCodigo" class="form-label">Stock</label>
-        <input type="text" class="form-control" name="Stock">
+        <input type="text" class="form-control" name="Stock" value="<?= $datos->Stock ?>">
     </div>  
         <?php }
         ?>
     
-    <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Registrar</button>
-    <br><br>
+    <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Editar Producto</button>
+    
     </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
