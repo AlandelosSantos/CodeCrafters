@@ -12,11 +12,12 @@ $sql = $conexion->query("select * from producto where CodigoBarras=$CodigoBarras
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EditarProducto</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <form class="col-4 p-3 m-auto" method="POST">
         <h3 class="text-center alert alert-secondary" >Editar Producto</h3>
-        <input type="text" name="CodigoBarras" value="<?= $_GET["CodigoBarras"]?>" >
+        <input type="hidden" name="CodigoBarras" value="<?= $_GET["CodigoBarras"]?>" >
         <?php 
         include "./controlEditar.php";
         while($datos=$sql->fetch_object()){?>
@@ -34,7 +35,7 @@ $sql = $conexion->query("select * from producto where CodigoBarras=$CodigoBarras
     </div>
     <div class="mb-3">
         <label for="exampleInputCodigo" class="form-label">Ofertas</label>
-        <input type="text" class="form-control" name="Ofertas" value="<?= $datos->Ofertas ?>">
+        <input type="text" class="form-control" name="Oferta" value="<?= $datos->Ofertas ?>">
     </div>
     <div class="mb-3">
         <label for="exampleInputCodigo" class="form-label">Stock</label>
@@ -43,7 +44,7 @@ $sql = $conexion->query("select * from producto where CodigoBarras=$CodigoBarras
         <?php }
         ?>
     
-    <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Editar Producto</button>
+    <button type="submit" class="btn btn-primary" name="actualizar" value="ok" >Editar Producto</button>
     
     </form>
 </body>

@@ -6,7 +6,8 @@
     <title>RegistroProductos</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3fc2f4517.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="style.css">
+  </head>
 <body>
   <script>
     function confirmar(){
@@ -15,34 +16,32 @@
   </script>
   <div class="table-wrapper" >
     <div class="col-smg-6" >
-      <h1 class="text-center p-3">Los4Hermanos</h1>
+      <h1 class="text-center p-3">Administrador de Productos</h1>
     </div>
   </div>
-
-<hr>
-<div class="container-fluid row">
-    <form class="col-4 p-3" method="POST">
+<div class="container-fluid row r">
+    <form class="col-2 p-3 s" method="POST">
       
         <h3 class="text-center text-secundary" >Registro de productos</h3>
         
     <div class="mb-3">
-        <label for="exampleInputCodigo" class="form-label">Codigo de Barras</label>
+        <label for="exampleInputCodigo" class="form-label i">Codigo de Barras</label>
         <input type="text" class="form-control" name="CodigoB">
     </div>
     <div class="mb-3">
-        <label for="exampleInputCodigo" class="form-label">Precio</label>
+        <label for="exampleInputCodigo" class="form-label i">Precio</label>
         <input type="text" class="form-control" name="Precio">
     </div>
     <div class="mb-3">
-        <label for="exampleInputCodigo" class="form-label">Descripcion</label>
+        <label for="exampleInputCodigo" class="form-label i">Descripcion</label>
         <input type="text" class="form-control" name="Descripcion">
     </div>
     <div class="mb-3">
-        <label for="exampleInputCodigo" class="form-label">Ofertas</label>
+        <label for="exampleInputCodigo" class="form-label i">Ofertas</label>
         <input type="text" class="form-control" name="Ofertas">
     </div>
     <div class="mb-3">
-        <label for="exampleInputCodigo" class="form-label">Stock</label>
+        <label for="exampleInputCodigo" class="form-label i">Stock</label>
         <input type="text" class="form-control" name="Stock">
     </div>
     <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Registrar</button>
@@ -53,9 +52,9 @@
         include "./controlEliminar.php";
         ?>
     </form>
-    <div class="col-8 p-4">
+    <div class="col-10 p-4">
     <table class="table">
-  <thead class="bg-info" >
+  <thead class="containerth" >
     <div class="col-smg-6 p-1">
       <a href="#AgregarProductoModal" class="btn btn-success" data-toggle="modal" >
         <span>Agregar Producto</span>
