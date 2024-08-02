@@ -55,12 +55,6 @@
     <div class="col-10 p-4">
     <table class="table">
   <thead class="containerth" >
-    <div class="col-smg-6 p-1">
-      <a href="#AgregarProductoModal" class="btn btn-success" data-toggle="modal" >
-        <span>Agregar Producto</span>
-      </a>
-      
-    </div>
     <tr>
       <th scope="col">CodigoDeBarras</th>
       <th scope="col">Precio</th>
