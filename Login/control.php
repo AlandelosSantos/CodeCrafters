@@ -31,7 +31,7 @@
         //Fin espacio sin datos
 
         //Verificacion de credenciales de usuario
-        $query = "SELECT * FROM users WHERE nom = '$usr' AND cont = '$cont'";
+        $query = "SELECT * FROM usuario WHERE nombre = '$usr' AND contraseña = '$cont'";
         $result = mysqli_query($conexion, $query);
         
         if(mysqli_num_rows($result) == 1){
