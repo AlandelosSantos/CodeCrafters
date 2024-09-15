@@ -40,7 +40,7 @@
             // Iniciar la sesion
             $_SESSION['usr'] = $user['usr'];
 
-            header("Location: Inicio.html");
+            header("Location: ../Menu/index.html");
         }else{
             echo "Credenciales incorrectas";
         }
