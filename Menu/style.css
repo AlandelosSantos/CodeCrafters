@@ -31,7 +31,7 @@ body{
 }
 .barra-lateral{
     width: 250px;
-    height: 100%;
+    height: 54rem;
     overflow: hidden;
     padding: 25px 15px;
     background-color: var(--color-barra-lateral);
@@ -153,3 +153,26 @@ body{
 .barra-lateral .usuario ion-icon{
     font-size: 20px;
 }
+.containerS{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.contenido{
+    position: absolute;
+    top: 0;
+    left: 270px;
+    right: 50px;
+    bottom: 90px;
+    background-color: #252424; 
+    padding: 25px 20px;
+    box-sizing: border-box; 
+  }
+  .contenidoM{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 68vh;
+  }
+  

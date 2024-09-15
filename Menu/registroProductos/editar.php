@@ -34,10 +34,6 @@ $sql = $conexion->query("select * from producto where CodigoBarras=$CodigoBarras
         <input type="text" class="form-control" name="Descripcion" value="<?= $datos->Descripcion ?>">
     </div>
     <div class="mb-3">
-        <label for="exampleInputCodigo" class="form-label">Ofertas</label>
-        <input type="text" class="form-control" name="Oferta" value="<?= $datos->Ofertas ?>">
-    </div>
-    <div class="mb-3">
         <label for="exampleInputCodigo" class="form-label">Stock</label>
         <input type="text" class="form-control" name="Stock" value="<?= $datos->Stock ?>">
     </div>  
@@ -45,7 +41,15 @@ $sql = $conexion->query("select * from producto where CodigoBarras=$CodigoBarras
         ?>
     
     <button type="submit" class="btn btn-primary" name="actualizar" value="ok" >Editar Producto</button>
-    
+    <button type="submit" class="btn btn-primary" name="btnvolverE">Volver</button>
+    <?php
+        include "./conexion.php";
+        if(isset($_POST['btnvolverE'])){
+          header("Location: ./index.php");
+          exit();
+        }
+       
+        ?>
     </form>
 </body>
 </html>
